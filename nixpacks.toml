@@ -1,5 +1,16 @@
 [phases.setup]
-nixPkgs = ["php82", "php82Extensions.opcache", "php82Extensions.pdo", "php82Extensions.pdo_sqlite", "php82Extensions.sqlite3", "php82Extensions.mbstring", "php82Extensions.xml", "php82Extensions.curl", "php82Extensions.zip", "php82Extensions.gd", "php82Extensions.fileinfo", "php82Extensions.openssl", "php82Extensions.tokenizer", "php82Extensions.json", "php82Extensions.bcmath", "php82Extensions.ctype", "php82Extensions.xmlwriter", "php82Extensions.dom", "php82Extensions.simplexml", "php82Extensions.phar", "php82Extensions.iconv", "php82Extensions.spl", "php82Extensions.reflection", "php82Extensions.session", "php82Extensions.standard", "php82Extensions.hash", "php82Extensions.filter", "php82Extensions.posix", "php82Extensions.shmop", "php82Extensions.sysvmsg", "php82Extensions.sysvsem", "php82Extensions.sysvshm", "php82Extensions.sockets", "php82Extensions.mysqli", "php82Extensions.pdo_mysql", "php82Extensions.pdo_pgsql", "php82Extensions.pgsql", "php82Extensions.odbc", "php82Extensions.pdo_odbc", "php82Extensions.interbase", "php82Extensions.pdo_firebird", "php82Extensions.oci8", "php82Extensions.pdo_oci", "php82Extensions.ibm_db2", "php82Extensions.pdo_ibm", "php82Extensions.odbc_ibm", "php82Extensions.ldap", "php82Extensions.soap", "php82Extensions.snmp", "php82Extensions.xmlreader", "php82Extensions.xmlrpc", "php82Extensions.xsl", "php82Extensions.bz2", "php82Extensions.calendar", "php82Extensions.dba", "php82Extensions.enchant", "php82Extensions.ftp", "php82Extensions.gettext", "php82Extensions.gmp", "php82Extensions.imap", "php82Extensions.intl", "php82Extensions.pspell", "php82Extensions.tidy", "composer", "nodejs", "npm"]
+nixPkgs = [
+  "php82",
+  "php82Extensions.pdo",
+  "php82Extensions.mbstring",
+  "php82Extensions.xml",
+  "php82Extensions.curl",
+  "php82Extensions.zip",
+  "php82Extensions.fileinfo",
+  "php82Packages.composer",
+  "nodejs",
+  "npm"
+]
 
 [phases.install]
 cmds = ["composer install --no-dev --optimize-autoloader", "npm install", "npm run build"]
