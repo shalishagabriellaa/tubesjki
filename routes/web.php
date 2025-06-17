@@ -35,3 +35,7 @@ Route::middleware('auth')->group(function () {
         return view('settings.index');
     })->name('settings.index');
 });
+
+Route::get('/health', function () {
+    return response('ok', 200);
+});
