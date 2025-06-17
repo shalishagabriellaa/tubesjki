@@ -8,8 +8,7 @@ nixPkgs = [
   "php82Extensions.zip",
   "php82Extensions.fileinfo",
   "php82Packages.composer",
-  "nodejs",
-  "npm"
+  "nodejs"
 ]
 
 [phases.install]
